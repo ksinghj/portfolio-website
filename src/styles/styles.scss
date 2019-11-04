@@ -1,0 +1,114 @@
+// Variables
+// Colours
+$blue: #65c1ff;
+$red: #ff6565;
+$green: #5bef8e;
+
+// Mixins
+// Buttons
+@mixin landing-button($color) {
+  background: $color;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+// Media Queries
+// Responsiive mq values
+$phone-sm: 375px;
+$phone-lg: 414px;
+$tablet-mini: 768px;
+$tablet-sm: 834px;
+$tablet-lg: 1024px;
+$laptop-sm: 1440px;
+$med-screen: 1880px;
+$lg-screen: 2440px;
+$tv: 2550px;
+
+// Mixins
+@mixin for-phone-only {
+  @media screen and (max-width: $phone-lg) {
+    @content;
+  }
+}
+@mixin for-phone-up {
+  @media screen and (min-width: $phone-sm) {
+    @content;
+  }
+}
+@mixin for-tablet-up {
+  @media screen and (min-width: $tablet-mini) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: $laptop-sm) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media screen and (max-width: $med-screen) {
+    @content;
+  }
+}
+// Code
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: Helvetica, Arial sans-serif;
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+
+    img.me {
+      max-width: 25vw;
+      height: auto;
+      margin: auto;
+      //onscroll: max-height: 0;
+      @include for-tablet-up() {
+        max-width: 15vw;
+      }
+      @include for-desktop-up() {
+        max-width: 10vw;
+      }
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: auto;
+      padding: 0.5em;
+
+      a {
+        padding: 0 1em;
+        img {
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  button.landing-button {
+    max-width: 13rem;
+
+    &.blue {
+      @include landing-button($blue);
+    }
+    &.red {
+      @include landing-button($red);
+    }
+    &.green {
+      @include landing-button($green);
+    }
+  }
+}

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  font-family: Helvetica, Arial sans-serif;
+}
+
+.container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 2px solid black;
+}
+
+.container .navbar img.me {
+  max-width: 25vw;
+  height: auto;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container .navbar img.me {
+    max-width: 15vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .navbar img.me {
+    max-width: 10vw;
+  }
+}
+
+.container .navbar .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: auto;
+  padding: 0.5em;
+}
+
+.container .navbar .socials a {
+  padding: 0 1em;
+}
+
+.container .navbar .socials a img {
+  width: 40px;
+  height: auto;
+}
+
+.container button.landing-button {
+  max-width: 13rem;
+}
+
+.container button.landing-button.blue {
+  background: #65c1ff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.container button.landing-button.red {
+  background: #ff6565;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.container button.landing-button.green {
+  background: #5bef8e;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+}
+/*# sourceMappingURL=styles.css.map */
