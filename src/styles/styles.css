@@ -17,7 +17,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-bottom: 2px solid black;
+}
+
+@media screen and (min-width: 1440px) {
+  .container .navbar {
+    border-bottom: 2px solid black;
+  }
 }
 
 .container .navbar img.me {
@@ -62,13 +67,59 @@
   height: auto;
 }
 
-.container button.landing-button {
-  max-width: 13rem;
+.container .main-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container button.landing-button.blue {
+@media screen and (min-width: 1024px) {
+  .container .main-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 2em;
+  }
+}
+
+.container .main-flex .main-flex-item {
+  margin: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-flex .main-flex-item .main-flex-header {
+  margin: 1em 0;
+  font-size: 44px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.container .main-flex .main-flex-item button.landing-button {
+  white-space: nowrap;
+}
+
+.container .main-flex .main-flex-item button.landing-button.blue {
   background: #65c1ff;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
@@ -76,9 +127,9 @@
   font-weight: 100;
 }
 
-.container button.landing-button.red {
+.container .main-flex .main-flex-item button.landing-button.red {
   background: #ff6565;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
@@ -86,9 +137,9 @@
   font-weight: 100;
 }
 
-.container button.landing-button.green {
+.container .main-flex .main-flex-item button.landing-button.green {
   background: #5bef8e;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;

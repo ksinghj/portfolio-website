@@ -8,7 +8,7 @@ $green: #5bef8e;
 // Buttons
 @mixin landing-button($color) {
   background: $color;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
@@ -17,7 +17,7 @@ $green: #5bef8e;
 }
 
 // Media Queries
-// Responsiive mq values
+// Responsive mq values
 $phone-sm: 375px;
 $phone-lg: 414px;
 $tablet-mini: 768px;
@@ -44,6 +44,11 @@ $tv: 2550px;
     @content;
   }
 }
+@mixin for-tablet-landscape-up {
+  @media screen and (min-width: $tablet-lg) {
+    @content;
+  }
+}
 @mixin for-desktop-up {
   @media screen and (min-width: $laptop-sm) {
     @content;
@@ -67,7 +72,10 @@ $tv: 2550px;
   .navbar {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid black;
+
+    @include for-desktop-up() {
+      border-bottom: 2px solid black;
+    }
 
     img.me {
       max-width: 25vw;
@@ -98,17 +106,44 @@ $tv: 2550px;
     }
   }
 
-  button.landing-button {
-    max-width: 13rem;
+  .main-flex {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
 
-    &.blue {
-      @include landing-button($blue);
+    @include for-tablet-landscape-up() {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 2em;
     }
-    &.red {
-      @include landing-button($red);
-    }
-    &.green {
-      @include landing-button($green);
+
+    .main-flex-item {
+      margin: 2em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .main-flex-header {
+        margin: 1em 0;
+        font-size: 44px;
+        font-weight: 100;
+        text-align: center;
+      }
+      // buttons
+      button.landing-button {
+        white-space: nowrap;
+
+        &.blue {
+          @include landing-button($blue);
+        }
+        &.red {
+          @include landing-button($red);
+        }
+        &.green {
+          @include landing-button($green);
+        }
+      }
     }
   }
 }
