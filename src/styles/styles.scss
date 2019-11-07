@@ -1,6 +1,7 @@
 // Variables
 // Colours
-$blue: #65c1ff;
+// $blue: #65c1ff;
+$blue: #64c9ff;
 $red: #ff6565;
 $green: #5bef8e;
 
@@ -54,6 +55,12 @@ $tv: 2550px;
     @content;
   }
 }
+@mixin for-medscrn-up {
+  @media screen and (min-width: $med-screen) {
+    @content;
+  }
+}
+
 @mixin for-desktop-only {
   @media screen and (max-width: $med-screen) {
     @content;
@@ -72,9 +79,14 @@ $tv: 2550px;
   .navbar {
     display: flex;
     flex-direction: column;
+    padding-bottom: 4rem;
 
     @include for-desktop-up() {
-      border-bottom: 2px solid black;
+      background: $blue;
+      clip-path: circle(50% at 50% -100%);
+    }
+    @include for-medscrn-up() {
+      clip-path: circle(50% at 50% -110%);
     }
 
     img.me {
@@ -94,14 +106,23 @@ $tv: 2550px;
       flex-direction: row;
       justify-content: space-evenly;
       margin: auto;
-      padding: 0.5em;
 
       a {
-        padding: 0 1em;
-        img {
-          width: 40px;
-          height: auto;
-        }
+        padding: 1em;
+        align-self: center;
+      }
+      a:hover {
+        cursor: default;
+      }
+      svg {
+        width: 2.5em;
+        height: auto;
+        color: black;
+        transition: 250ms ease-in-out;
+      }
+      svg:hover {
+        cursor: none;
+        color: #ffffff;
       }
     }
   }
@@ -111,6 +132,7 @@ $tv: 2550px;
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+    margin-top: 3em;
 
     @include for-tablet-landscape-up() {
       flex-direction: row;
@@ -119,7 +141,6 @@ $tv: 2550px;
     }
 
     .main-flex-item {
-      margin: 2em 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -144,6 +165,14 @@ $tv: 2550px;
           @include landing-button($green);
         }
       }
+      button.landing-button:hover {
+        cursor: pointer;
+      }
     }
+  }
+  footer {
+    bottom: 0;
+    margin-top: 20vh;
+    text-align: center;
   }
 }
