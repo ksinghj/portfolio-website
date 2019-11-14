@@ -17,7 +17,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-bottom: 2px solid black;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .container .navbar {
+    background: #64c9ff;
+    -webkit-clip-path: circle(50% at 50% -100%);
+            clip-path: circle(50% at 50% -100%);
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  .container .navbar {
+    -webkit-clip-path: circle(50% at 50% -110%);
+            clip-path: circle(50% at 50% -110%);
+  }
 }
 
 .container .navbar img.me {
@@ -50,25 +65,85 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: auto;
-  padding: 0.5em;
 }
 
 .container .navbar .socials a {
-  padding: 0 1em;
+  padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.container .navbar .socials a img {
-  width: 40px;
+.container .navbar .socials a:hover {
+  cursor: default;
+}
+
+.container .navbar .socials svg {
+  width: 2.5em;
   height: auto;
+  color: black;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
-.container button.landing-button {
-  max-width: 13rem;
+.container .navbar .socials svg:hover {
+  cursor: none;
+  color: #ffffff;
 }
 
-.container button.landing-button.blue {
-  background: #65c1ff;
-  padding: 1em 2em;
+.container .main-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3em;
+}
+
+@media screen and (min-width: 1024px) {
+  .container .main-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 2em;
+  }
+}
+
+.container .main-flex .main-flex-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-flex .main-flex-item .main-flex-header {
+  margin: 1em 0;
+  font-size: 44px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.container .main-flex .main-flex-item button.landing-button {
+  white-space: nowrap;
+}
+
+.container .main-flex .main-flex-item button.landing-button.blue {
+  background: #64c9ff;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
@@ -76,9 +151,9 @@
   font-weight: 100;
 }
 
-.container button.landing-button.red {
+.container .main-flex .main-flex-item button.landing-button.red {
   background: #ff6565;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
@@ -86,13 +161,23 @@
   font-weight: 100;
 }
 
-.container button.landing-button.green {
+.container .main-flex .main-flex-item button.landing-button.green {
   background: #5bef8e;
-  padding: 1em 2em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 20px;
   font-weight: 100;
+}
+
+.container .main-flex .main-flex-item button.landing-button:hover {
+  cursor: pointer;
+}
+
+.container footer {
+  bottom: 0;
+  margin-top: 20vh;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
