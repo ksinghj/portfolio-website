@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import avataar from "../img/avataaarb-min.png";
-// import { Link } from "react-router-dom";
-// <link to='#'></Link>
 
 class Navbar extends Component {
   render() {
@@ -10,7 +8,11 @@ class Navbar extends Component {
         <div className="navbar">
           <img className="me" src={avataar} alt="graphic self portrait" />
           <div className="socials">
-            <a href="https://google.com">
+            <a
+              href="https://www.linkedin.com/in/kartar-jabanda-li/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 className="svg-inline--fa fa-linkedin-in fa-w-14 blue"
                 aria-hidden="true"
@@ -28,7 +30,11 @@ class Navbar extends Component {
                 ></path>
               </svg>
             </a>
-            <a href="https://google.com">
+            <a
+              href="https://github.com/KJabandaa10"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 className="svg-inline--fa fa-github fa-w-16 red"
                 aria-hidden="true"
@@ -46,7 +52,11 @@ class Navbar extends Component {
                 ></path>
               </svg>
             </a>
-            <a href="https://google.com">
+            <a
+              href="https://twitter.com/kartarjabanda"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 className="svg-inline--fa fa-twitter fa-w-16 green"
                 aria-hidden="true"
