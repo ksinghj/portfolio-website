@@ -32,7 +32,12 @@ class DeveloperTiles extends Component {
           <div className="tile tile-1">
             <img src={ksj} alt="My freelance website" />
             <p className="name">KSJ Online</p>
-            <p className="desc">My freelance business website.</p>
+            <p className="desc">
+              My freelance business website; Cost effective solutions to create
+              and expand business online. I have been freelancing for a year
+              now, building websites for local businesses and Individuals across
+              the country.
+            </p>
             <button className="landing-button red">
               <a
                 target="_blank"
