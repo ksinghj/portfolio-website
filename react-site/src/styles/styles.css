@@ -188,15 +188,7 @@ button.landing-button:hover {
 
 .container footer {
   bottom: 0;
-  margin-top: 20vh;
+  margin: 20vh 0;
   text-align: center;
-}
-
-.container .tiles {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-  -ms-grid-columns: 1fr;
-      grid-template: 1fr / 1fr;
 }
 /*# sourceMappingURL=styles.css.map */
