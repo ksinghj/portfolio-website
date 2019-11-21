@@ -5,6 +5,49 @@
           box-sizing: border-box;
 }
 
+button.landing-button {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+button.landing-button.blue {
+  background: #64c9ff;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+button.landing-button.red {
+  background: #ff6565;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+button.landing-button.green {
+  background: #5bef8e;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+button.landing-button i {
+  padding: 2em;
+}
+
+button.landing-button:hover {
+  cursor: pointer;
+}
+
 .container {
   font-family: Helvetica, Arial sans-serif;
 }
@@ -135,52 +178,17 @@
   text-align: center;
 }
 
-.container .main-flex .main-flex-item button.landing-button {
-  white-space: nowrap;
-  font-weight: bold;
-}
-
-.container .main-flex .main-flex-item button.landing-button.blue {
-  background: #64c9ff;
-  padding: 0.5em 1.5em;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.container .main-flex .main-flex-item button.landing-button.red {
-  background: #ff6565;
-  padding: 0.5em 1.5em;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.container .main-flex .main-flex-item button.landing-button.green {
-  background: #5bef8e;
-  padding: 0.5em 1.5em;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.container .main-flex .main-flex-item button.landing-button i {
-  padding: 2em;
-}
-
-.container .main-flex .main-flex-item button.landing-button:hover {
-  cursor: pointer;
-}
-
 .container footer {
   bottom: 0;
   margin-top: 20vh;
   text-align: center;
+}
+
+.container .tiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr / 1fr;
 }
 /*# sourceMappingURL=styles.css.map */
