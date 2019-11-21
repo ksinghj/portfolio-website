@@ -103,7 +103,7 @@ button.landing-button:hover {
   .navbar {
     display: flex;
     flex-direction: column;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
 
     @include for-desktop-up() {
       background: $blue;
@@ -111,6 +111,9 @@ button.landing-button:hover {
     }
     @include for-medscrn-up() {
       clip-path: circle(50% at 50% -110%);
+    }
+    @media screen and (min-width: 550px) {
+      padding-bottom: 4rem;
     }
 
     img.me {
@@ -156,7 +159,6 @@ button.landing-button:hover {
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    margin-top: 3em;
 
     @include for-tablet-landscape-up() {
       flex-direction: row;
@@ -165,9 +167,10 @@ button.landing-button:hover {
     }
 
     .main-flex-item {
-      display: hidden;
+      display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 1em 0;
 
       .main-flex-header {
         margin: 1em 0;

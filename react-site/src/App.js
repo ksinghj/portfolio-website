@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./styles/App.css";
-import "./styles/styles.scss";
+import "./styles/styles.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // Main flex items
