@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/tiles.css";
 // img
-import questation from "../img/tiles/designer/Questation.png";
+import questation from "../img/tiles/creator/questation.png";
 import questation2 from "../img/tiles/creator/questation2.png";
 import questation3 from "../img/tiles/creator/questation3.png";
 

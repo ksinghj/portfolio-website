@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/tiles.css";
 // img
-import questation from "../img/tiles/designer/Questation.png";
+import questation from "../img/tiles/designer/questation.png";
 import KARTAR from '../img/tiles/designer/"KARTAR".png';
 import flatspace from "../img/tiles/designer/flatspace.png";
 
