@@ -48,15 +48,6 @@ class CreatorTiles extends Component {
             <img className="more" src={questation2} alt="My maths app" />
             <img className="more" src={questation3} alt="My maths app" />
             <p className="desc">*Design subject to change.</p>
-            {/* <button className="landing-button red">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://google.com/"
-              >
-                See more here
-              </a>
-    </button> */}
           </div>
         </div>
       </React.Fragment>

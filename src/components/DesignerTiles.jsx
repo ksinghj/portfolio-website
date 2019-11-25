@@ -6,6 +6,15 @@ import questation from "../img/tiles/designer/questation.png";
 import KARTAR from '../img/tiles/designer/"KARTAR".png';
 import flatspace from "../img/tiles/designer/flatspace.png";
 
+function Tile(props) {
+  return (
+    <div className={`tile ${props.tileClass}`}>
+      <img src={props.imgSrc} alt={props.imgAlt} />
+      <p className="name">{props.name}</p>
+      <p className="desc">{props.desc}</p>
+    </div>
+  );
+}
 class DesignerTiles extends Component {
   render() {
     return (
@@ -36,25 +45,26 @@ class DesignerTiles extends Component {
               Coming soon... An app built for maths teachers, currently in
               development.
             </p>
-            <button className="landing-button red">
-              <Link to="/CreatorTiles">Learn more here</Link>
-            </button>
+            <Link to="/CreatorTiles">
+              <button className="landing-button red">Learn more here</button>
+            </Link>
           </div>
 
-          <div className="tile tile-2">
-            <img src={KARTAR} alt="Old portfolio design" />
-            <p className="name">Legacy portfolio design</p>
-            <p className="desc">
-              Previous design iteration of this website, before I opted to build
-              it using React.js
-            </p>
-          </div>
-
-          <div className="tile tile-3">
-            <img src={flatspace} alt="flat space frame" />
-            <p className="name">Flat space frame</p>
-            <p className="desc">Flat space sketch file</p>
-          </div>
+          <Tile
+            tileClass="tile-2"
+            imgSrc={KARTAR}
+            alt={"Old portfolio design"}
+            name="Previous portfolio design"
+            desc="Previous design iteration of this website, before I opted to build
+              it using React.js"
+          />
+          <Tile
+            tileClass="tile-3"
+            imgSrc={flatspace}
+            alt={"Flat space frame"}
+            name="Flat space frame"
+            desc="Flat space sketch artboard, inspired by Kurzgesagt – In a Nutshell videos."
+          />
         </div>
       </React.Fragment>
     );

@@ -6,6 +6,21 @@ import ksj from "../img/tiles/developer/ksj.png";
 import smartpuntr from "../img/tiles/developer/smartpuntr.png";
 import mjcs from "../img/tiles/developer/mjcs.png";
 
+function Tile(props) {
+  return (
+    <div className={`tile ${props.tileClass}`}>
+      <img src={props.imgSrc} alt={props.imgAlt} />
+      <p className="name">{props.name}</p>
+      <p className="desc">{props.desc}</p>
+      <a target="_blank" rel="noopener noreferrer" href={props.href}>
+        <button className={`landing-button ${props.btnClass}`}>
+          Go to site{" "}
+        </button>
+      </a>
+    </div>
+  );
+}
+
 class DeveloperTiles extends Component {
   render() {
     return (
@@ -29,61 +44,39 @@ class DeveloperTiles extends Component {
         </div>
 
         <div className="developer-tiles tiles">
-          <div className="tile tile-1">
-            <img src={ksj} alt="My freelance website" />
-            <p className="name">KSJ Online</p>
-            <p className="desc">
-              My freelance business website; Cost effective solutions to create
+          <Tile
+            tileClass="tile-1"
+            imgSrc={ksj}
+            alt={"KSJ"}
+            name="KSJ Online"
+            desc="My freelance business website; Cost effective solutions to create
               and expand business online. I have been freelancing for a year
               now, building websites for local businesses and Individuals across
-              the country.
-            </p>
-            <button className="landing-button red">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://ksj.services/"
-              >
-                Go to site
-              </a>
-            </button>
-          </div>
+              the country."
+            btnClass="red"
+            href="https://ksj.services/"
+          />
 
-          <div className="tile tile-2">
-            <img
-              src={smartpuntr}
-              alt="SmartPuntr, an online betting platform"
-            />
-            <p className="name">SmartPuntr</p>
-            <p className="desc">
-              An online betting platform, used to track your betting history
-              over time.
-            </p>
-            <button className="landing-button blue">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://smartpuntr.com/"
-              >
-                Go to site
-              </a>
-            </button>
-          </div>
+          <Tile
+            tileClass="tile-2"
+            imgSrc={smartpuntr}
+            alt={"SmartPuntr, an online betting platform"}
+            name="SmartPuntr"
+            desc="An online betting platform, used to track your betting history
+              over time."
+            btnClass="blue"
+            href="https://smartpuntr.com/"
+          />
 
-          <div className="tile tile-3">
-            <img src={mjcs} alt="A property services company website" />
-            <p className="name">MJ-CS Ltd</p>
-            <p className="desc">A property services company website.</p>
-            <button className="landing-button red">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://mjcs.ltd/"
-              >
-                Go to site
-              </a>
-            </button>
-          </div>
+          <Tile
+            tileClass="tile-3"
+            imgSrc={mjcs}
+            alt={"A property services company website"}
+            name="MJ-CS Ltd"
+            desc="A property services company website"
+            btnClass="red"
+            href="https://mjcs.ltd/"
+          />
         </div>
       </React.Fragment>
     );
