@@ -5,6 +5,17 @@ import "../styles/tiles.css";
 import questation from "../img/tiles/creator/questation.png";
 import questation2 from "../img/tiles/creator/questation2.png";
 import questation3 from "../img/tiles/creator/questation3.png";
+import bookNotes from "../img/tiles/creator/bookNotes-1.png";
+
+function Tile(props) {
+  return (
+    <div className={`tile ${props.tileClass}`}>
+      <img src={props.imgSrc} alt={props.imgAlt} />
+      <p className="name">{props.name}</p>
+      <p className="desc">{props.desc}</p>
+    </div>
+  );
+}
 
 class CreatorTiles extends Component {
   render() {
@@ -49,6 +60,14 @@ class CreatorTiles extends Component {
             <img className="more" src={questation3} alt="My maths app" />
             <p className="desc">*Design subject to change.</p>
           </div>
+
+          <Tile
+            tileClass="tile-2"
+            imgSrc={bookNotes}
+            alt={"Book Notes"}
+            name="Book Notes (Blog)"
+            desc="A website where I upload my notes on books I've read. This site was made with WordPress."
+          />
         </div>
       </React.Fragment>
     );
