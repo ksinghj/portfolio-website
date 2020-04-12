@@ -6,6 +6,7 @@ import Tile from "./Tile";
 import ksj from "../img/tiles/developer/ksj.png";
 import smartpuntr from "../img/tiles/developer/smartpuntr.png";
 import mjcs from "../img/tiles/developer/mjcs.png";
+import rona from "../img/tiles/developer/github-screenshot.png";
 
 class DeveloperTiles extends Component {
   render() {
@@ -30,6 +31,16 @@ class DeveloperTiles extends Component {
         </div>
 
         <div className="developer-tiles tiles">
+          <Tile
+            tileClass="tile-3"
+            imgSrc={rona}
+            alt={"Rona"}
+            name="COVID-19 Real time statistics"
+            desc="Small app made with React Redux. What else is there to do in lockdown!"
+            btnClass="red"
+            href="https://https://github.com/KJabandaa10/rona"
+          />
+
           <Tile
             tileClass="tile-1"
             imgSrc={ksj}

@@ -6,7 +6,9 @@ class Tile extends React.Component {
     if ((href, btnClass)) {
       return (
         <a target="_blank" rel="noopener noreferrer" href={href}>
-          <button className={`landing-button ${btnClass}`}>Go to site </button>
+          <button className={`landing-button ${btnClass}`}>
+            Go to repo/site{" "}
+          </button>
         </a>
       );
     }
