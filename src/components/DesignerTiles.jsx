@@ -1,20 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/tiles.css";
+import Tile from "./Tile";
 // img
 import questation from "../img/tiles/designer/questation.png";
 import KARTAR from '../img/tiles/designer/"KARTAR".png';
 import flatspace from "../img/tiles/designer/flatspace.png";
 
-function Tile(props) {
-  return (
-    <div className={`tile ${props.tileClass}`}>
-      <img src={props.imgSrc} alt={props.imgAlt} />
-      <p className="name">{props.name}</p>
-      <p className="desc">{props.desc}</p>
-    </div>
-  );
-}
 class DesignerTiles extends Component {
   render() {
     return (

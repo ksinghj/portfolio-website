@@ -1,26 +1,27 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/tiles.css";
+import Tile from "./Tile";
 // img
 import ksj from "../img/tiles/developer/ksj.png";
 import smartpuntr from "../img/tiles/developer/smartpuntr.png";
 import mjcs from "../img/tiles/developer/mjcs.png";
 
-function Tile(props) {
-  return (
-    <div className={`tile ${props.tileClass}`}>
-      <img src={props.imgSrc} alt={props.imgAlt} />
-      <p className="name">{props.name}</p>
-      <p className="desc">{props.desc}</p>
-      <a target="_blank" rel="noopener noreferrer" href={props.href}>
-        <button className={`landing-button ${props.btnClass}`}>
-          Go to site{" "}
-        </button>
-      </a>
-    </div>
-  );
-}
-
+// function Tile(props) {
+//   return (
+//     <div className={`tile ${props.tileClass}`}>
+//       <img src={props.imgSrc} alt={props.imgAlt} />
+//       <p className="name">{props.name}</p>
+//       <p className="desc">{props.desc}</p>
+//       <a target="_blank" rel="noopener noreferrer" href={props.href}>
+//         <button className={`landing-button ${props.btnClass}`}>
+//           Go to site{" "}
+//         </button>
+//       </a>
+//     </div>
+//   );
+// }
+// TODO: create Tile component to acheive DRYer code!
 class DeveloperTiles extends Component {
   render() {
     return (
