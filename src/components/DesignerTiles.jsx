@@ -30,18 +30,14 @@ class DesignerTiles extends Component {
         </div>
 
         <div className="designer-tiles tiles">
-          <div className="tile tile-1">
-            <img src={questation} alt="Maths question generator app" />
-            <p className="name">Questation</p>
-            <p className="desc">
-              Coming soon... An app built for maths teachers, currently in
-              development.
-            </p>
-            <Link to="/CreatorTiles">
-              <button className="landing-button red">Learn more here</button>
-            </Link>
-          </div>
-
+          <Tile
+            tileClass="tile-1"
+            imgSrc={questation}
+            alt={"Maths question generator app"}
+            name="Questation"
+            desc="Coming soon... An app built for maths teachers, currently in
+              development."
+          />
           <Tile
             tileClass="tile-2"
             imgSrc={KARTAR}
