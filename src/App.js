@@ -34,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: icons white only on blue bg
