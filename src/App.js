@@ -16,8 +16,8 @@ import CreatorTiles from "./components/CreatorTiles";
 
 function App() {
   return (
-    <Router>
-      <div className="App container">
+    <div className="App container">
+      <Router>
         <Navbar></Navbar>
         <div className="main-flex">
           <Route exact path="/" component={Designer} />
@@ -28,8 +28,8 @@ function App() {
         <Route path="/DeveloperTiles" component={DeveloperTiles} />
         <Route path="/CreatorTiles" component={CreatorTiles} />
         <Footer></Footer>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
