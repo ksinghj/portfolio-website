@@ -133,18 +133,18 @@ button.landing-button:hover {
         padding: 1em;
         align-self: center;
       }
-      a:hover {
-        cursor: default;
-      }
+
       svg {
         width: 2.5em;
         height: auto;
         color: black;
         transition: 250ms ease-in-out;
       }
-      svg:hover {
-        cursor: none;
-        color: #ffffff;
+      @media (min-width: 2000px) {
+        svg:hover {
+          cursor: none;
+          color: #ffffff;
+        }
       }
     }
   }

@@ -123,10 +123,6 @@ button.landing-button:hover {
       align-self: center;
 }
 
-.container .navbar .socials a:hover {
-  cursor: default;
-}
-
 .container .navbar .socials svg {
   width: 2.5em;
   height: auto;
@@ -135,9 +131,11 @@ button.landing-button:hover {
   transition: 250ms ease-in-out;
 }
 
-.container .navbar .socials svg:hover {
-  cursor: none;
-  color: #ffffff;
+@media (min-width: 2000px) {
+  .container .navbar .socials svg:hover {
+    cursor: none;
+    color: #ffffff;
+  }
 }
 
 .container .main-flex {
