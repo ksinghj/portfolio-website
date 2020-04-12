@@ -24,7 +24,6 @@ $phone-lg: 414px;
 $tablet-mini: 768px;
 $tablet-sm: 834px;
 $tablet-lg: 1024px;
-$laptop-sm: 1440px;
 $med-screen: 1880px;
 $lg-screen: 2440px;
 $tv: 2550px;
@@ -51,7 +50,7 @@ $tv: 2550px;
   }
 }
 @mixin for-desktop-up {
-  @media screen and (min-width: $laptop-sm) {
+  @media screen and (min-width: $tablet-lg) {
     @content;
   }
 }

@@ -63,7 +63,7 @@ button.landing-button:hover {
   padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container .navbar {
     background: #64c9ff;
     -webkit-clip-path: circle(50% at 50% -100%);
@@ -96,7 +96,7 @@ button.landing-button:hover {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container .navbar img.me {
     max-width: 10vw;
   }
