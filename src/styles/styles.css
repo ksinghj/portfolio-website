@@ -16,7 +16,7 @@ button.landing-button.blue {
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -26,7 +26,7 @@ button.landing-button.red {
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -36,7 +36,7 @@ button.landing-button.green {
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -80,7 +80,7 @@ button.landing-button:hover {
 
 @media screen and (min-width: 550px) {
   .container .navbar {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -153,7 +153,7 @@ button.landing-button:hover {
           align-items: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 600px) {
   .container .main-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -181,9 +181,15 @@ button.landing-button:hover {
 
 .container .main-flex .main-flex-item .main-flex-header {
   margin: 1em 0;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 100;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .container .main-flex .main-flex-item .main-flex-header {
+    margin: 0;
+  }
 }
 
 .container footer {
