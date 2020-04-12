@@ -5,10 +5,7 @@ import "./styles/App.css";
 import "./styles/styles.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// Main flex items
-import Designer from "./components/Designer";
-import Developer from "./components/Developer";
-import Creator from "./components/Creator";
+import MainCard from "./components/MainCard";
 // Tiles
 import DesignerTiles from "./components/DesignerTiles";
 import DeveloperTiles from "./components/DeveloperTiles";
@@ -20,9 +17,21 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <div className="main-flex">
-          <Route exact path="/" component={Designer} />
-          <Route exact path="/" component={Developer} />
-          <Route exact path="/" component={Creator} />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Designer" buttonColour="blue" />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Developer" buttonColour="red" />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Creator" buttonColour="green" />}
+          />
         </div>
         <Route path="/DesignerTiles" component={DesignerTiles} />
         <Route path="/DeveloperTiles" component={DeveloperTiles} />
@@ -34,3 +43,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: When button is clicked scroll to top of page (or header)
