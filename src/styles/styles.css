@@ -20,6 +20,12 @@ button.landing-button.blue {
   font-weight: 300;
 }
 
+@media screen and (min-width: 1200px) {
+  button.landing-button.blue {
+    font-size: 20px;
+  }
+}
+
 button.landing-button.red {
   background: #ff6565;
   padding: 0.5em 1.5em;
@@ -30,6 +36,12 @@ button.landing-button.red {
   font-weight: 300;
 }
 
+@media screen and (min-width: 1200px) {
+  button.landing-button.red {
+    font-size: 20px;
+  }
+}
+
 button.landing-button.green {
   background: #5bef8e;
   padding: 0.5em 1.5em;
@@ -38,6 +50,12 @@ button.landing-button.green {
   color: white;
   font-size: 12px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 1200px) {
+  button.landing-button.green {
+    font-size: 20px;
+  }
 }
 
 button.landing-button i {
@@ -63,7 +81,13 @@ button.landing-button:hover {
   padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 550px) {
+  .container .navbar {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .container .navbar {
     background: #64c9ff;
     -webkit-clip-path: circle(50% at 50% -100%);
@@ -78,9 +102,9 @@ button.landing-button:hover {
   }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1440px) {
   .container .navbar {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -96,7 +120,7 @@ button.landing-button:hover {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .container .navbar img.me {
     max-width: 10vw;
   }
@@ -131,7 +155,7 @@ button.landing-button:hover {
   transition: 250ms ease-in-out;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1600px) {
   .container .navbar .socials svg:hover {
     cursor: none;
     color: #ffffff;
@@ -187,6 +211,7 @@ button.landing-button:hover {
 @media (min-width: 600px) {
   .container .main-flex .main-flex-item .main-flex-header {
     margin: 0;
+    font-size: 30px;
   }
 }
 

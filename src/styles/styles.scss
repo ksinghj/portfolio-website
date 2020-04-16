@@ -15,6 +15,10 @@ $green: #5bef8e;
   color: white;
   font-size: 12px;
   font-weight: 300;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
 }
 
 // Media Queries
@@ -44,13 +48,8 @@ $tv: 2550px;
     @content;
   }
 }
-@mixin for-tablet-landscape-up {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
-}
 @mixin for-desktop-up {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     // TODO: Remove this and change all instances to tab landscape up
     @content;
   }
@@ -100,6 +99,9 @@ button.landing-button:hover {
     flex-direction: column;
     padding-bottom: 1rem;
 
+    @media screen and (min-width: 550px) {
+      padding-bottom: 2rem;
+    }
     @include for-desktop-up() {
       background: $blue;
       clip-path: circle(50% at 50% -100%);
@@ -107,8 +109,8 @@ button.landing-button:hover {
     @include for-medscrn-up() {
       clip-path: circle(50% at 50% -110%);
     }
-    @media screen and (min-width: 550px) {
-      padding-bottom: 2rem;
+    @media screen and (min-width: 1440px) {
+      padding-bottom: 4rem;
     }
 
     img.me {
@@ -140,7 +142,7 @@ button.landing-button:hover {
         color: black;
         transition: 250ms ease-in-out;
       }
-      @media (min-width: 2000px) {
+      @media (min-width: 1600px) {
         svg:hover {
           cursor: none;
           color: #ffffff;
@@ -175,6 +177,7 @@ button.landing-button:hover {
 
         @media (min-width: 600px) {
           margin: 0;
+          font-size: 30px;
         }
       }
     }
