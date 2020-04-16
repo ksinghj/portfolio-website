@@ -38,7 +38,7 @@ class DeveloperTiles extends Component {
             name="COVID-19 Real time statistics"
             desc="Small app made with React Redux. What else is there to do in lockdown!"
             btnClass="red"
-            href="https://https://github.com/KJabandaa10/rona"
+            href="https://covid19figures.netlify.app"
           />
 
           <Tile
@@ -51,7 +51,7 @@ class DeveloperTiles extends Component {
               now, building websites for local businesses and Individuals across
               the country."
             btnClass="red"
-            href="https://ksj.services/"
+            href="https://ksjservices.netlify.app/"
           />
 
           <Tile
