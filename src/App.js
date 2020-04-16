@@ -7,9 +7,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MainCard from "./components/MainCard";
 // Tiles
-import DesignerTiles from "./components/DesignerTiles";
-import DeveloperTiles from "./components/DeveloperTiles";
-import CreatorTiles from "./components/CreatorTiles";
+import DesignerTiles from "./components/Tiles/DesignerTiles";
+import DeveloperTiles from "./components/Tiles/DeveloperTiles";
+import CreatorTiles from "./components/Tiles/CreatorTiles";
 
 function App() {
   return (

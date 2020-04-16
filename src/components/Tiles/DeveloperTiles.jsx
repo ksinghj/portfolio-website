@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../styles/tiles.css";
-import Tile from "./Tile";
+import "../../styles/tiles.css";
+import Tile from "../Tile";
 // img
-import ksj from "../img/tiles/developer/ksj.png";
-import smartpuntr from "../img/tiles/developer/smartpuntr.png";
-import mjcs from "../img/tiles/developer/mjcs.png";
-import rona from "../img/tiles/developer/github-screenshot.png";
+import ksj from "../../img/tiles/developer/ksj.png";
+import smartpuntr from "../../img/tiles/developer/smartpuntr.png";
+import mjcs from "../../img/tiles/developer/mjcs.png";
+import rona from "../../img/tiles/developer/github-screenshot.png";
 
 class DeveloperTiles extends Component {
   render() {

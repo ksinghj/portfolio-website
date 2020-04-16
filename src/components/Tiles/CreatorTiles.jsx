@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../styles/tiles.css";
+import "../../styles/tiles.css";
 // img
-import questation from "../img/tiles/creator/questation.png";
-import questation2 from "../img/tiles/creator/questation2.png";
-import questation3 from "../img/tiles/creator/questation3.png";
+import questation from "../../img/tiles/creator/questation.png";
+import questation2 from "../../img/tiles/creator/questation2.png";
+import questation3 from "../../img/tiles/creator/questation3.png";
 
 class CreatorTiles extends Component {
   render() {

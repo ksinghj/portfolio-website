@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../styles/tiles.css";
-import Tile from "./Tile";
+import "../../styles/tiles.css";
+import Tile from "../Tile";
 // img
-import questation from "../img/tiles/designer/questation.png";
-import KARTAR from '../img/tiles/designer/"KARTAR".png';
-import flatspace from "../img/tiles/designer/flatspace.png";
+import questation from "../../img/tiles/designer/questation.png";
+import KARTAR from '../../img/tiles/designer/"KARTAR".png';
+import flatspace from "../../img/tiles/designer/flatspace.png";
 
 class DesignerTiles extends Component {
   render() {
