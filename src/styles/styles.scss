@@ -13,8 +13,12 @@ $green: #5bef8e;
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 300;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
 }
 
 // Media Queries
@@ -24,34 +28,29 @@ $phone-lg: 414px;
 $tablet-mini: 768px;
 $tablet-sm: 834px;
 $tablet-lg: 1024px;
-$laptop-sm: 1440px;
 $med-screen: 1880px;
 $lg-screen: 2440px;
 $tv: 2550px;
 
 // Mixins
 @mixin for-phone-only {
-  @media screen and (max-width: $phone-lg) {
+  @media screen and (max-width: 414px) {
     @content;
   }
 }
 @mixin for-phone-up {
-  @media screen and (min-width: $phone-sm) {
+  @media screen and (min-width: 375px) {
     @content;
   }
 }
 @mixin for-tablet-up {
-  @media screen and (min-width: $tablet-mini) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-up {
-  @media screen and (min-width: $tablet-lg) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 @mixin for-desktop-up {
-  @media screen and (min-width: $laptop-sm) {
+  @media screen and (min-width: 1200px) {
+    // TODO: Remove this and change all instances to tab landscape up
     @content;
   }
 }
@@ -61,11 +60,6 @@ $tv: 2550px;
   }
 }
 
-@mixin for-desktop-only {
-  @media screen and (max-width: $med-screen) {
-    @content;
-  }
-}
 // Code
 * {
   margin: 0;
@@ -105,6 +99,9 @@ button.landing-button:hover {
     flex-direction: column;
     padding-bottom: 1rem;
 
+    @media screen and (min-width: 550px) {
+      padding-bottom: 2rem;
+    }
     @include for-desktop-up() {
       background: $blue;
       clip-path: circle(50% at 50% -100%);
@@ -112,7 +109,7 @@ button.landing-button:hover {
     @include for-medscrn-up() {
       clip-path: circle(50% at 50% -110%);
     }
-    @media screen and (min-width: 550px) {
+    @media screen and (min-width: 1440px) {
       padding-bottom: 4rem;
     }
 
@@ -138,18 +135,18 @@ button.landing-button:hover {
         padding: 1em;
         align-self: center;
       }
-      a:hover {
-        cursor: default;
-      }
+
       svg {
         width: 2.5em;
         height: auto;
         color: black;
         transition: 250ms ease-in-out;
       }
-      svg:hover {
-        cursor: none;
-        color: #ffffff;
+      @media (min-width: 1600px) {
+        svg:hover {
+          cursor: none;
+          color: #ffffff;
+        }
       }
     }
   }
@@ -160,7 +157,7 @@ button.landing-button:hover {
     // justify-content: center;
     align-items: center;
 
-    @include for-tablet-landscape-up() {
+    @media (min-width: 600px) {
       flex-direction: row;
       justify-content: space-around;
       margin-top: 2em;
@@ -174,9 +171,14 @@ button.landing-button:hover {
 
       .main-flex-header {
         margin: 1em 0;
-        font-size: 44px;
+        font-size: 26px;
         font-weight: 100;
         text-align: center;
+
+        @media (min-width: 600px) {
+          margin: 0;
+          font-size: 30px;
+        }
       }
     }
   }

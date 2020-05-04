@@ -5,32 +5,43 @@ import "./styles/App.css";
 import "./styles/styles.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// Main flex items
-import Designer from "./components/Designer";
-import Developer from "./components/Developer";
-import Creator from "./components/Creator";
+import MainCard from "./components/MainCard";
 // Tiles
-import DesignerTiles from "./components/DesignerTiles";
-import DeveloperTiles from "./components/DeveloperTiles";
-import CreatorTiles from "./components/CreatorTiles";
+import DesignerTiles from "./components/Tiles/DesignerTiles";
+import DeveloperTiles from "./components/Tiles/DeveloperTiles";
+import CreatorTiles from "./components/Tiles/CreatorTiles";
 
 function App() {
   return (
-    <Router>
-      <div className="App container">
+    <div className="App container">
+      <Router>
         <Navbar></Navbar>
         <div className="main-flex">
-          <Route exact path="/" component={Designer} />
-          <Route exact path="/" component={Developer} />
-          <Route exact path="/" component={Creator} />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Designer" buttonColour="blue" />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Developer" buttonColour="red" />}
+          />
+          <Route
+            exact
+            path="/"
+            render={props => <MainCard area="Creator" buttonColour="green" />}
+          />
         </div>
         <Route path="/DesignerTiles" component={DesignerTiles} />
         <Route path="/DeveloperTiles" component={DeveloperTiles} />
         <Route path="/CreatorTiles" component={CreatorTiles} />
         <Footer></Footer>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
 export default App;
+
+// TODO: When button is clicked scroll to top of page (or header)
