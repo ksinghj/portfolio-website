@@ -7,6 +7,7 @@ import ksj from "../../img/tiles/developer/ksj.png";
 import smartpuntr from "../../img/tiles/developer/smartpuntr.png";
 import mjcs from "../../img/tiles/developer/mjcs.png";
 import rona from "../../img/tiles/developer/github-screenshot.png";
+import weather from "../../img/tiles/developer/weather.png";
 
 class DeveloperTiles extends Component {
   render() {
@@ -32,12 +33,22 @@ class DeveloperTiles extends Component {
 
         <div className="developer-tiles tiles">
           <Tile
+            tileClass="tile-2"
+            imgSrc={weather}
+            alt={"Weather app"}
+            name="Real time weather"
+            desc="Another app I made whilst in lockdown!"
+            btnClass="blue"
+            href="https://realtimeweather.netlify.app/"
+          />
+
+          <Tile
             tileClass="tile-3"
             imgSrc={rona}
             alt={"Rona"}
             name="COVID-19 Real time statistics"
             desc="Small app made with React Redux. What else is there to do in lockdown!"
-            btnClass="red"
+            btnClass="blue"
             href="https://covid19figures.netlify.app"
           />
 

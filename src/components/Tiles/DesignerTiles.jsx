@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/tiles.css";
 import Tile from "../Tile";
 // img
-import questation from "../../img/tiles/designer/questation.png";
+import questation from "../../img/tiles/designer/Questation.png";
 import KARTAR from '../../img/tiles/designer/"KARTAR".png';
 import flatspace from "../../img/tiles/designer/flatspace.png";
 
