@@ -1,9 +1,9 @@
 # My portfolio website
 
-## https://frosty-darwin-6f1896.netlify.com/
+## https://kartardev.netlify.app/
 
 ### Made with ReactJS.
 
 ### Contains work examples.
 
-// Last build: Thu 16 Apr 13:49
+// Last build: Mon 4 May 16:12
