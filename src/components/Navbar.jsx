@@ -31,7 +31,7 @@ class Navbar extends Component {
               </svg>
             </a>
             <a
-              href="https://github.com/KJabandaa10"
+              href="https://github.com/ksinghj"
               target="_blank"
               rel="noopener noreferrer"
             >
