@@ -6,7 +6,7 @@ import Tile from "../Tile";
 import ksj from "../../img/tiles/developer/ksj.png";
 import smartpuntr from "../../img/tiles/developer/smartpuntr.png";
 import mjcs from "../../img/tiles/developer/mjcs.png";
-import rona from "../../img/tiles/developer/github-screenshot.png";
+import rona from "../../img/tiles/developer/rona.png";
 import weather from "../../img/tiles/developer/weather.png";
 
 class DeveloperTiles extends Component {
