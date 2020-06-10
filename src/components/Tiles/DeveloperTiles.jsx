@@ -37,7 +37,7 @@ class DeveloperTiles extends Component {
             imgSrc={weather}
             alt={"Weather app"}
             name="Real time weather"
-            desc="Another app I made whilst in lockdown!"
+            desc="Another app weather app, I know, but this one has autocomplete and weekly forecasts."
             btnClass="blue"
             href="https://realtimeweather.netlify.app/"
           />

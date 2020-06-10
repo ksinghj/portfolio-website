@@ -35,8 +35,9 @@ class DesignerTiles extends Component {
             imgSrc={questation}
             alt={"Maths question generator app"}
             name="Questation"
-            desc="Coming soon... An app built for maths teachers, currently in
-              development."
+            desc="An app that allows math teachers to automate homework creation."
+            btnClass="red"
+            href="https://questation.app"
           />
           <Tile
             tileClass="tile-2"
