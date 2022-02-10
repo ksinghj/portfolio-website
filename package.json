@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.8.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.11.0",
     "react-browser-router": "^2.1.2",
     "react-dom": "^16.11.0",
